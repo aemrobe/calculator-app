@@ -23,7 +23,13 @@ buttonContainer.addEventListener("click", function (e) {
 
   outputText.textContent = output;
 
-  console.log(output);
+  // const characterWithoutOperators = output.split(/[x\+\-\/\s]+/g);
+
+  const characterWithoutWhiteSpace = output.split(/[\s]+/g);
+
+  let sum = "";
+  let character = "";
+  let operator = "";
 });
 
 //understanding of the problem
