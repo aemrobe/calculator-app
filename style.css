@@ -14,6 +14,7 @@ html {
   font-family: "League-Spartan";
   src: url(./font-family/static/LeagueSpartan-Bold.ttf);
 }
+
 :root {
   /*colors*/
   /*### theme1 ### */
@@ -124,7 +125,7 @@ body {
   padding: 2.3rem;
   border-radius: 8px;
   display: grid;
-  grid-template-columns: repeat(4, 60px);
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   grid-gap: 12px;
 }
 
@@ -133,21 +134,29 @@ body {
   border-radius: 5px;
   color: var(--very-dark-grayish-blue);
   text-align: center;
+  filter: brightness(1);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.calc__button:hover {
+  filter: brightness(1.6);
+}
+
 .button-bg-gray {
   background-color: var(--light-grayish-orange-key-back);
+  box-shadow: 0 4px var(--grayish-orange-key-shadow);
 }
 
 .button-bg-blue {
   background-color: var(--desaturated-dark-blue-key-back);
+  box-shadow: 0 4px var(--desaturated-dark-blue-key-shadow);
 }
 
 .button-bg-red {
   background-color: var(--red-key-back-toogle);
+  box-shadow: 0 4px var(--dark-red-key-shadow);
 }
 
 .calc__button-reset,
